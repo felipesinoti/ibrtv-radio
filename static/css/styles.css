@@ -9,6 +9,10 @@
   --text-color: #555555;
 }
 
+html {
+  color-scheme: light !important;
+}
+
 body {
   font-family: 'Noto Sans', sans-serif;
   color: var(--text-color);
@@ -303,25 +307,6 @@ h6 {
 #back-to-top.show {
   opacity: 1;
   visibility: visible;
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: white;
-    color: black;
-  }
-
-  /* Adapte os outros elementos também */
-  a {
-    color: blue;
-  }
-
-  nav,
-  header,
-  footer {
-    background-color: white;
-    color: black;
-  }
 }
 
 /* Responsividade */
