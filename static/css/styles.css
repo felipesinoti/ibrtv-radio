@@ -305,6 +305,25 @@ h6 {
   visibility: visible;
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: white;
+    color: black;
+  }
+
+  /* Adapte os outros elementos também */
+  a {
+    color: blue;
+  }
+
+  nav,
+  header,
+  footer {
+    background-color: white;
+    color: black;
+  }
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
   body {
@@ -337,4 +356,5 @@ h6 {
   .section {
     padding: 3rem 0;
   }
+
 }
