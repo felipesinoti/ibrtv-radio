@@ -5,8 +5,8 @@ import os
 app = Flask(__name__)
 
 # Chave da API do YouTube (coloque aqui ou use dotenv)
-YOUTUBE_API_KEY = 'AIzaSyCP8FZOIgigQ8jBw0GuDJq9RI3GBq6o3I4'
-CHANNEL_ID ='UCwckSFwCQbw_BiCzNab44Ng' #'UCU8NMiUBdWubzn_RTRpEq7A'  # Canal IBRVT
+YOUTUBE_API_KEY = os.getenv("YT_API_KEY")
+CHANNEL_ID = os.getenv("CHANNEL_KEY")
 
 @app.route('/')
 def index():
