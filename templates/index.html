@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Rádio Vida na Vida - A voz da Primeira Igreja Batista Regular da Vila Teixeira" />
+    <meta name="author" content="" />
+    <title>Rádio Vida na Vida</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/logo.ico') }}" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+        rel="stylesheet" type="text/css" />
+    <script src="https://public.radio.co/playerapi/jquery.radiocoplayer.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+
+<body id="page-top">
+    <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#page-top">
+                        <img src="{{ url_for('static', filename='img/logo.jpg') }}"></img>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#page-top">Início</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">Sobre</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#programming">Programação</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">Contato</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>RÁDIO VIDA NA VIDA</h1>
+            <p class="lead">A voz da Primeira Igreja Batista Regular da Vila Teixeira</p>
+            <div class="audio-player">
+                <div class="container text-center">
+                    <div class="radio-player">
+                        <div id="youtube-audio-wrapper"></div>
+                        <div class="player-controls">
+                            <button id="yt-play-btn" class="btn-play">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <div class="volume-controls">
+                                <button id="volume-down" class="btn-volume">
+                                    <i class="fas fa-volume-down"></i>
+                                </button>
+                                <input type="range" id="volume-slider" min="0" max="100" value="70" class="form-range">
+                                <button id="volume-up" class="btn-volume">
+                                    <i class="fas fa-volume-up"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div id="now-playing" class="now-playing player-info">
+                            <h4>Programa Atual:</h4>
+                            <p id="yt-current-track">Vida na Vida</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-primary" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title">Sobre a Rádio</h2>
+                    <p class="mb-5">
+                        A Rádio Vida na Vida é um ministério da Primeira Igreja Batista Regular da Vila Teixeira,
+                        dedicado a transmitir a Palavra de Deus e mensagens de esperança.
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="p-4 bg-white rounded shadow-sm">
+                                <i class="fas fa-bible text-primary mb-3" style="font-size: 2rem;"></i>
+                                <h4>Mensagens Edificantes</h4>
+                                <p>Pregações e estudos bíblicos para fortalecer sua fé</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="p-4 bg-white rounded shadow-sm">
+                                <i class="fas fa-music text-primary mb-3" style="font-size: 2rem;"></i>
+                                <h4>Louvor e Adoração</h4>
+                                <p>Seleção dos melhores hinos e cânticos cristãos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="programming">
+        <div class="container">
+            <h2 class="section-title">Programação da IBRVT</h2>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="program-card">
+                        <h4>Reunião de oração</h4>
+                        <p><i class="far fa-clock me-2"></i>Quarta-feira - 20:00h</p>
+                        <p class="small">Reunião de oração</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="program-card">
+                        <h4>Culto Matutino</h4>
+                        <p><i class="far fa-clock me-2"></i>Domingo - 9:00h</p>
+                        <p class="small">Transmissão ao vivo do culto dominical</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="program-card">
+                        <h4>Culto Vespertino</h4>
+                        <p><i class="far fa-clock me-2"></i>Domingo - 19:00h</p>
+                        <p class="small">Transmissão ao vivo do culto dominical</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="map" id="contact">
+        <iframe src="https://www.google.com/maps?q=Igreja+Batista+Regular+da+Vila+Teixeira,+Campinas+-+SP&output=embed"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <div class="map-link">
+            <a href="https://www.google.com/maps?q=Igreja+Batista+Regular+da+Vila+Teixeira,+Campinas+-+SP"
+                target="_blank">
+                Ver mapa maior
+            </a>
+        </fiv>
+    </div>
+
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mx-auto">
+                    <h3 class="mb-4">RÁDIO VIDA NA VIDA</h3>
+                    <p class="mb-4">A voz da Primeira Igreja Batista Regular da Vila Teixeira</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <p class="small mb-0">© 2025 Rádio Vida na Vida. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-buttons">
+        <button id="back-to-top" class="floating-btn" title="Voltar ao topo">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        <button id="whatsapp-btn" class="floating-btn" title="Fale conosco no WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </button>
+    </div>
+    
+    <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
+</body>
+
+</html>
